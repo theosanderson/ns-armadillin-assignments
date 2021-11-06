@@ -26,6 +26,7 @@ jobs:
         wget https://data.nextstrain.org/files/ncov/open/aligned.fasta.xz
         armadillin aligned.fasta.xz > assignments.tsv
         rm aligned.fasta.xz
+        gzip assignments.tsv
     - uses: EndBug/add-and-commit@v7
       with:
         default_author: github_actions
