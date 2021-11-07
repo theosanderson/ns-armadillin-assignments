@@ -24,7 +24,7 @@ jobs:
     - name: Do everything
       run: |
         wget https://data.nextstrain.org/files/ncov/open/aligned.fasta.xz
-        armadillin aligned.fasta.xz > assignments.tsv
+        armadillin --seqs_are_aligned aligned.fasta.xz > assignments.tsv
         rm aligned.fasta.xz
         gzip --force assignments.tsv
     - uses: EndBug/add-and-commit@v7
