@@ -6,6 +6,6 @@ metadata = pd.read_csv(
     usecols=['strain', 'genbank_accession', 'gisaid_epi_isl'])
 assignments = pd.read_csv('../assignments.tsv.gz',
                           sep='\t',
-                          names=['strain', 'armadillin_lineage'])
+                          names=['strain', 'pango_lineage_armadillin'])
 both = metadata.merge(assignments, on='strain')
 both.to_csv('../assignments.tsv.gz', sep='\t', index=False)
